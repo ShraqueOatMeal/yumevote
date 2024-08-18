@@ -14,7 +14,7 @@ const Vote = () => {
   useEffect(() => {
     const fetchVoteData = async () => {
       try {
-        const response = await fetch(`https://voting_system_yumevote.htetaung.com/api/results`);
+        const response = await fetch("https://voting_system_yumevote.htetaung.com/api/results");
         const data = await response.json();
         const formattedData = data.map(item => ({
           name: item.CandidateName,
