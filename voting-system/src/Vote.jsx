@@ -14,7 +14,7 @@ const Vote = () => {
   useEffect(() => {
     const fetchVoteData = async () => {
       try {
-        const response = await fetch('http://10.242.192.170:8001/results');
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/results`);
         const data = await response.json();
         const formattedData = data.map(item => ({
           name: item.CandidateName,
