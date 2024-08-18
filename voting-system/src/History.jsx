@@ -15,7 +15,7 @@ const History = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/history`);
+        const response = await fetch("https://voting_system_yumevote.htetaung.com/api/history");
         const result = await response.json();
         
         setData(result);
